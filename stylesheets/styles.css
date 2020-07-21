@@ -1,3 +1,5 @@
+@import url('https://nmagee.github.io/cs4740/stylesheets/buttons.css');
+
 @font-face {
   font-family: 'Noto Sans';
   font-weight: 400;
@@ -60,8 +62,10 @@ body {
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#727272;
   font-weight:400;
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -324,5 +328,3 @@ footer {
     color:#444;
   }
 }
-
-@import url('https://nmagee.github.io/cs4740/stylesheets/buttons.css');
