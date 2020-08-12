@@ -51,7 +51,13 @@ further bootstrap an already-customized AMI.
 
 <ol style="">
   <li>Establish what you need to bootstrap upon instance creation. In this example you will be working with an Amazon Linux instance, which
-    is based on the RHEL/CentOS
+    is based on the RHEL/CentOS distribution. This means you will be using the <code>yum</code> package manager as a start.
+    <ul>
+      <li>Use <code>yum</code> to update the OS.
+      <li>Use <code>yum</code> to install specific packages.
+      <li>Use <code>yum</code> to install tools that install other supporting libraries or resources.
+    </ul>
+  </li>
   <li>Sign into your AWS account and go to the EC2 service.
   <li>
   <li>
