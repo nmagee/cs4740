@@ -200,7 +200,7 @@
       <td><a href="https://l.uvarc.io/youtube-lectures" target="_new">Watch</a></td>
       <td>
         <img src="../images/video.png" /> <a href="https://www.youtube.com/watch?v=71cd5XerKss" target="_new">AWS Lambda + Serverless</a> <br />
-        <img src="../images/book.png" /> <a href="../assets/serverless-architectures-with-aws-lambda.pdf" target="_new">Serverless Architectures</a> <br />
+        <img src="../images/book.png" /> <a href="" target="_new">Read</a> <br />
         <img src="../images/lab.png" style="height:12px;width:12px;" /> <a href="https://amazon.qwiklabs.com/focuses/10541?parent=catalog" target="_new">Lab: AWS Lambda</a>
       </td>
     </tr>
