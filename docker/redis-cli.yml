@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - 6379:6379
+
+  redis-cli:
+    image: redis
+    restart: always
+    environment:
+      MY_ENV: value
