@@ -1,85 +1,159 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>CS4740 Cloud Computing - Schedule</title>
+GitHub Flavored Markdown
+================================
 
-    <link rel="stylesheet" href="https://nmagee.github.io/cs4740/stylesheets/styles.css">
-    <link rel="stylesheet" href="https://nmagee.github.io/cs4740/stylesheets/github-light.css">
-    <link rel="Shortcut Icon" href="https://www.rc.virginia.edu/images/favicon.ico" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+*View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
 
-    <style>
-      li {margin-bottom:1rem;}
-      .btn {padding:8px;margin-right:8px;background-color:#555;color:white;border-radius: 4px;}
-    </style>
+Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:
 
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="https://nmagee.github.io/cs4740/" style="color:black;text-decoration:none;">CS4740 Cloud Computing</a></h1>
-        <p>Neal Magee, Ph.D.<br />Solution Architect, Research Computing<br />University of Virginia, Fall 2020</p>
+Roses are red
+Violets are blue
 
-        <div style="min-height:2rem;"></div>
+The next paragraph has the same phrases, but now they are separated by two spaces and a newline character:
 
-        <ul>
-          <li><a href="https://nmagee.github.io/cs4740/">Return to the<strong>Syllabus</strong></a></li>
-          <li><a href="" target="_new">View lectures<strong>YouTube</strong></a></li>
-          <li><a href="https://l.uvarc.io/discord">Discussions on <strong>Discord</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        
-<h2>Lab: IoT Services in AWS</h2>
+Roses are red  
+Violets are blue
 
-<p>Bootstrapping is the process of bringing a resource onlne fully loaded with OS updates, packages, and software required to run
-without human intervention or further configuration. You can bootstrap a "barebones" instance of a particular OS distribution, or
-further bootstrap an already-customized AMI.
-</p>
+Oh, and one thing I cannot stand is the mangling of words with multiple underscores in them like perform_complicated_task or do_this_and_do_that_and_another_thing.
 
-<p>This lab introduces the basics of updating your EC2 instance upon creation.</p>
+A bit of the GitHub spice
+-------------------------
 
-<div style="margin:2rem 0 2rem 0;">
-  <a href="#basics"><button class="btn">Basics</button></a>
-  <a href="#user-data"><button class="btn">User-Data</button></a>
-  <a href="#budget"><button class="btn">Set a Budget</button></a>
-</div>
+In addition to the changes in the previous section, certain references are auto-linked:
 
-<ol style="">
-  <li>Establish what you need to bootstrap upon instance creation. In this example you will be working with an Amazon Linux instance, which
-    is based on the RHEL/CentOS distribution. This means you will be using the <code>yum</code> package manager as a start.
-    <ul>
-      <li>Use <code>yum</code> to update the OS.
-      <li>Use <code>yum</code> to install specific packages.
-      <li>Use <code>yum</code> to install tools that install other supporting libraries or resources.
-    </ul>
-  </li>
-  <li>Sign into your AWS account and go to the EC2 service.
-  <li>
-  <li>
-      <img src="../images/spend-summary.png" alt="Spend Summary" style="" />
-  <li>
-  <li>
-  <li>
-      <img src="../images/billing-details.png" alt="Billing Details by month" style="" />
-  <li>
-  <li>
-  <li>
-      <img src="../images/budget-types.png" alt="Budget types" style="" />
-</ol>
+* SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* User@SHA ref: mojombo@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* User/Project@SHA: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* \#Num: #1
+* User/#Num: mojombo#1
+* User/Project#Num: mojombo/god#1
 
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/nmagee">nmagee</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+These are dangerous goodies though, and we need to make sure email addresses don't get mangled:
+
+My email addy is tom@github.com.
+
+Math is hard, let's go shopping
+-------------------------------
+
+In first grade I learned that 5 > 3 and 2 < 7. Maybe some arrows. 1 -> 2 -> 3. 9 <- 8 <- 7.
+
+Triangles man! a^2 + b^2 = c^2
+
+We all like making lists
+------------------------
+
+The above header should be an H2 tag. Now, for a list of fruits:
+
+* Red Apples
+* Purple Grapes
+* Green Kiwifruits
+
+Let's get crazy:
+
+1.  This is a list item with two paragraphs. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+    mi posuere lectus.
+
+    Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+    sit amet velit.
+
+2.  Suspendisse id sem consectetuer libero luctus adipiscing.
+
+What about some code **in** a list? That's insane, right?
+
+1. In Ruby you can map like this:
+
+        ['a', 'b'].map { |x| x.uppercase }
+
+2. In Rails, you can do a shortcut:
+
+        ['a', 'b'].map(&:uppercase)
+
+Some people seem to like definition lists
+
+<dl>
+  <dt>Lower cost</dt>
+  <dd>The new version of this product costs significantly less than the previous one!</dd>
+  <dt>Easier to use</dt>
+  <dd>We've changed the product so that it's much easier to use!</dd>
+</dl>
+
+I am a robot
+------------
+
+Maybe you want to print `robot` to the console 1000 times. Why not?
+
+    def robot_invasion
+      puts("robot " * 1000)
+    end
+
+You see, that was formatted as code because it's been indented by four spaces.
+
+How about we throw some angle braces and ampersands in there?
+
+    <div class="footer">
+        &copy; 2004 Foo Corporation
     </div>
-    <script src="https://nmagee.github.io/cs4740/javascripts/scale.fix.js"></script>
-    
-  </body>
-</html>
+
+Set in stone
+------------
+
+Preformatted blocks are useful for ASCII art:
+
+<pre>
+             ,-. 
+    ,     ,-.   ,-. 
+   / \   (   )-(   ) 
+   \ |  ,.>-(   )-< 
+    \|,' (   )-(   ) 
+     Y ___`-'   `-' 
+     |/__/   `-' 
+     | 
+     | 
+     |    -hrr- 
+  ___|_____________ 
+</pre>
+
+Playing the blame game
+----------------------
+
+If you need to blame someone, the best way to do so is by quoting them:
+
+> I, at any rate, am convinced that He does not throw dice.
+
+Or perhaps someone a little less eloquent:
+
+> I wish you'd have given me this written question ahead of time so I
+> could plan for it... I'm sure something will pop into my head here in
+> the midst of this press conference, with all the pressure of trying to
+> come up with answer, but it hadn't yet...
+>
+> I don't want to sound like
+> I have made no mistakes. I'm confident I have. I just haven't - you
+> just put me under the spot here, and maybe I'm not as quick on my feet
+> as I should be in coming up with one.
+
+Table for two
+-------------
+
+<table>
+  <tr>
+    <th>ID</th><th>Name</th><th>Rank</th>
+  </tr>
+  <tr>
+    <td>1</td><td>Tom Preston-Werner</td><td>Awesome</td>
+  </tr>
+  <tr>
+    <td>2</td><td>Albert Einstein</td><td>Nearly as awesome</td>
+  </tr>
+</table>
+
+Crazy linking action
+--------------------
+
+I get 10 times more traffic from [Google] [1] than from
+[Yahoo] [2] or [MSN] [3].
+
+  [1]: http://google.com/        "Google"
+  [2]: http://search.yahoo.com/  "Yahoo Search"
+  [3]: http://search.msn.com/    "MSN Search"
