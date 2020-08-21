@@ -46,7 +46,11 @@ further bootstrap an already-customized AMI.
 
 <p><b>BEFORE</b> you start this lab, be sure to watch the <a href="https://www.youtube.com/watch?v=R98ViHlHOGY" target="_new">How To: Create an EC2 Instance</a> video if you are not familiar with the basics of creating an instance in EC2.</p>
 
-<ol style="">
+<iframe width="784" height="441" src="https://www.youtube.com/embed/R98ViHlHOGY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br /><br />
+
+<ol>
   <li>Establish what you need to bootstrap upon instance creation. In this example you will be working with an Amazon Linux instance, which
     is based on the RHEL/CentOS distribution. This means you will be using the <code>yum</code> package manager as a start, and loading other resources as necessary.
     <ul>
@@ -87,8 +91,8 @@ A few notes:
   <li>From there, yum is used to install specific packages non-interactively.</li>
 </ul>
 
-  <li>Alernatively, some Linux distributions come cloud-enabled with the <code>cloud-init</code> tool. This allows bootstrapping to be
-  much less script-driven and more declarative, resembling management tools like Ansible. Here is an example of a <code>cloud-init</code> script. <br /><br />
+  <li>Alernatively, most Linux distributions (Amazon Linux, Debian, Fedora, Gentoo, Alpine, RHEL, Cent, Ubuntu, Core) come cloud-enabled with the <code>cloud-init</code> tool. This allows bootstrapping to be
+  much less script-driven and more declarative, resembling management tools like Ansible. AWS, Google and Azure all support <code>cloud-init</code>. Here is an example of a <code>cloud-init</code> script. <br /><br />
 <pre>
 #cloud-config
 repo_update: true
