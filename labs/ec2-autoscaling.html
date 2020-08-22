@@ -84,7 +84,7 @@ or based upon aggregate metrics across the existing stack.</p>
 <ol>
 <li>Final notes: <br /><br />
     <ul>
-      <li>At some point boostrapping becomes to large, too long, and too unwieldy. When you get to that point, consider creating your own AMI based upon a customized instance that has the tools and software you need.</li>
+      <li>At some point boostrapping becomes too large, too long, and too unwieldy. When you get to that point, consider creating your own AMI based upon a customized instance that has the tools and software you need.</li>
       <li>Bootstrapping should be seen as prepping a "bare" instance for production.</li>
       <li>In environments where instances are being destroyed frequently, bootstrapping can take care of basic OS/package updates, and a change management tool (such as Ansible) can be used for updates, if needed.</li>
       <li>Some deployments / shops never update instances after creation. Therefore, bootstrapping is the last point for refreshing and upgrading.</li>
