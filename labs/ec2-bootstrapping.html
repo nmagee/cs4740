@@ -166,7 +166,9 @@ aws ec2 run-instances --image-id ami-abcd1234 --count 1 --instance-type m3.mediu
   </li>
   
   <br clear="all" /><br />
-  <li>After you have shelled into your instance to verify all expected packages got installed, <b>you should terminate your instance</b> to clean up resources and stop incurring all costs. To stop your instance, select it from the list of instances, and from the ACTIONS menu select the INSTANCE STATE submenu, and then click on TERMINATE INSTANCE.</li>
+  <li>After you have shelled into your instance to verify all expected packages got installed, <b>you should terminate your instance</b> to clean up resources and stop incurring all costs. To stop your instance, select it from the list of instances, and from the ACTIONS menu select the INSTANCE STATE submenu, and then click on TERMINATE INSTANCE.
+    <img src="../images/terminate-instance.png" alt="Terminate EC2 instance" style="" />
+  </li>
   <li>Final notes: <br /><br />
     <ul>
       <li>At some point boostrapping becomes too large, too long, and too unwieldy. When you get to that point, consider creating your own AMI based upon a customized instance that has the tools and software you need.</li>
