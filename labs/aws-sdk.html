@@ -181,23 +181,42 @@ except botocore.exceptions.ParamValidationError as error:
 </ol>
 
 <h2><a name="try-it-out"></a>Try It Out</h2>
-<ol>
-  <li>Update the necessary values in the above <code>run_instances()</code> snippet and run it yourself. Verify that a new instance has been created in your account.</li>
-  <li>Create a python3 snippet that creates three buckets in S3. The <code>boto3</code> documentation for S3 can be found <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html" target="_new">here</a>.</li>
-  <li>Create a python3 snippet that lists your buckets and prints them to the terminal.</li>
-  <li>Next, go to the SNS service in your account using the AWS console:
+
+<p>Select two scenarios below and complete them:</p>
+
+<div style="border:solid 1px #ccc;padding:1rem;margin:1rem;">
+  <h3>EC2 Compute</h3>
+  <p>Update the necessary values in the above <code>run_instances()</code> snippet and run it yourself. Verify that a new instance has been created in your account.</p>
+  <p>Next, terminate the instance using another Python snippet.</p>
+  <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html" target="_new"><button class="btn">boto3 EC2 documentation</button></a> 
+</div>
+
+<div style="border:solid 1px #ccc;padding:1rem;margin:1rem;">
+    <h3>S3 Storage</h3>
+  <p>Create a python3 snippet that creates three buckets in S3. The <code>boto3</code> documentation for S3 can be found <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html" target="_new">here</a>.</p>
+  <p>Create a python3 snippet that lists your buckets and prints them to the terminal.</p>
+  <p>For an additional challenge (optional), upload and download an object to your bucket using only Python.</p>
+  <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html" target="_new"><button class="btn">boto3 S3 documentation</button></a>
+</div>
+
+<div style="border:solid 1px #ccc;padding:1rem;margin:1rem;">
+    <h3>SNS Notifications</h3>
+  <p>Next, go to the SNS service in your account using the AWS console:</p>
     <ol type=a>
       <li>Create an SNS Topic. From the dashboard of the SNS service, enter a simple name in the "Create Topic" box and click "Next Step".</li>
       <li>On the next screen, enter a Display Name if you like. Leave other settings as-is. Click "Create Topic".</li>
-      <li>While on the Topic details page, copy the ARN of the SNS topic you just created. You will need this later.</li>
+      <li>While on the Topic details page, copy the ARN of the SNS topic you just created. You will need this in your <code>boto3</code> request.</li>
       <li>Add your email as a subscription to the topic. On the details page for your new topic, find the orange "Create Subscription" button and click it.</li>
       <li>In the "Create Subscription" form, select EMAIL and enter your email address as the Endpoint. Then click "Create Subscription". You will receive an email asking you to confirm your subscription.</li>
     </ol>
   </li>
-  <li>
-    Using the SNS <code><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sns.html#SNS.Client.publish" target="_new">publish</a></code> resource, publish a message to your Topic in code. Specify at least a subject and a message.
-  </li>
-</ol>
+  <p>Using the SNS <code><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sns.html#SNS.Client.publish" target="_new">publish</a></code> resource, publish a message to your Topic in code. Specify at least a subject and a message.</p>
+  <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sns.html#SNS.Client.publish" target="_new"><button class="btn">boto3 SNS documentation</button></a>
+</div>
+
+<h2>Cleanup</h2>
+
+<p>Remove or delete any resources you created above after the lab is complete. Be especially sure not to leave an EC2 instance running!</p>
 
       </section>
       <footer>
