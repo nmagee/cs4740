@@ -45,7 +45,7 @@
 
 <p>This lab introduces the basics of working with the <code>boto3</code> library in Python3.</p>
 
-<div style="border:solid 1px #ccc;background-color:#eee;margin:1rem;padding:1rem;">
+<div style="border:solid 1px #ccc;background-color:#eee;padding:1rem;">
   <img align="right" src="../images/python-icon.png" alt="Python" style="max-height:80px;" />
   <h3>Python3</h3>
   All students are expected to create code snippets compatible with <b>Python3</b>. Python2 has been dropped from support and is no longer a secure or sustainable language release.
@@ -207,13 +207,13 @@ except botocore.exceptions.ParamValidationError as error:
 
 <div style="border:solid 1px #ccc;padding:1rem;margin:1rem;">
     <h3>SNS Notifications</h3>
-  <p>Next, go to the SNS service in your account using the AWS console:</p>
+  <p>SNS (simple notification service) allows you to programmatically send notifications between apps or to human recipients. In this scenario, send yourself an email or SMS message. To get started, go to the SNS service in your account using the AWS console:</p>
     <ol type=a>
       <li>Create an SNS Topic. From the dashboard of the SNS service, enter a simple name in the "Create Topic" box and click "Next Step".</li>
       <li>On the next screen, enter a Display Name if you like. Leave other settings as-is. Click "Create Topic".</li>
       <li>While on the Topic details page, copy the ARN of the SNS topic you just created. You will need this in your <code>boto3</code> request.</li>
       <li>Add your email as a subscription to the topic. On the details page for your new topic, find the orange "Create Subscription" button and click it.</li>
-      <li>In the "Create Subscription" form, select EMAIL and enter your email address as the Endpoint. Then click "Create Subscription". You will receive an email asking you to confirm your subscription.</li>
+      <li>In the "Create Subscription" form, select EMAIL and enter your email address as the Endpoint. Then click "Create Subscription". You will receive an email asking you to confirm your subscription. Or create an SMS endpoint and subscribe your mobile phone number.</li>
     </ol>
   </li>
   <p>Using the SNS <code><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sns.html#SNS.Client.publish" target="_new">publish</a></code> resource, publish a message to your Topic in code. Specify at least a subject and a message.</p>
