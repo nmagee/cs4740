@@ -120,6 +120,8 @@ client = boto3.client('ec2')
   <li>
     Putting these elements together, the <code>run_instances</code> call will look something like this:
 <pre>
+import boto3
+
 response = client.run_instances(
   ImageId='ami-02354e95b39ca8dec',
   InstanceType='t2.micro',
