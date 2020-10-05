@@ -326,3 +326,12 @@ footer {
     color:#444;
   }
 }
+
+.btn {
+  padding:8px;
+  margin-right:8px;
+  background-color:#555;
+  color:white;
+  border-radius: 4px;
+}
+    
