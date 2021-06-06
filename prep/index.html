@@ -33,46 +33,64 @@
         
 <h1>Preparing for the Fall</h1>
 
-<p>In order to go farther and deeper this Fall, here are five suggestions of how you might prepare over the summer, if you have the time and inclination. <b>These are optional suggestions</b>, but will give you an ability to do more and go further in CS4740 this fall. Some you may have under your belt already, or you may just want to pick one to focus on.</p>
+<p>In the hopes of covering as much content as possible this Fall, here are five suggestions for how can prepare 
+over the summer (if you have the time and inclination). <b>These are optional suggestions</b>. Some tools you may 
+already be familiar with, but review those below you do not know so well.</p> 
 
-<hr size=1 />
-<h2>Five Tools to Learn</h2>
+<p>Also, one remnant of COVID online teaching that I am going to retain is a course discord server. If you use Discord already you’ll be familiar with the concept – if not, create a free account and join our server. You’ll pick it up easily. This will be a useful place for links, quick updates, and Q&A.</p>
+<p>Click the image below to join:</p>
+
+<a href="https://discord.gg/fTf9Vh3kaq" target="_new">
+  <img src="../images/discord-logo.png" alt="Discord Server" style="max-width:200px;margin-left:6em;" />
+</a>
+
+<hr size=1 /> 
+<a name="tools"><h2>Five Tools to Learn</h2></a>
+
 
 <br clear=all />
 <p><img src="../images/circle-1.png" align="left" alt="1" style="height:60px;width:60px;margin:1rem;" />
-<b>Learn the Linux shell and do not be afraid of it.</b><br />We will be using the AWS command-line tools, scripting in bash, and will consume and generate plenty of JSON and YAML. Be familiar with <code>curl</code>, <code>httpie</code>, or <code>wget</code> to fetch remote objects or interact with APIs. Bonus: Learn how to use <code>jq</code>.</p>
-
-<div style="margin-left:8em;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/uxEJU96gHzA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-<br clear=all />
-<p><img src="../images/circle-2.png" align="left" alt="1" style="height:60px;width:60px;margin:1rem;" />
-<b>Learn a basic Linux package manager such as <code>apt</code>, <code>yum</code>, or <code>apk</code>.</b><br />You will create and delete many instances in this course, and how to “bootstrap” an instance automatically upon creation. This means loading software, and that means a package manager. One great way to practice this is with Docker (see below).</p>
-
-<div style="margin-left:8em;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/0D4wGOy_a9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-<br clear=all />
-<p><img src="../images/circle-3.png" align="left" alt="1" style="height:60px;width:60px;margin:1rem;" />
-<b>Know how to work in Python3.</b><br />Be familiar with how to create virtual environments using <code>pipenv</code>, how to install dependencies, and manage local files, <code>env</code> variables, etc. within your code. Python2 will not be accepted. Python in this course will interact with cloud infrastructure, so a proper understanding
-of error handling and exceptions is useful. 
-Bonus: Create an AWS account of your own and start working with the boto3 library.</p>
-
-<div style="margin-left:8em;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/h2azrD35EYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-<br clear=all />
-<p><img src="../images/circle-4.png" align="left" alt="1" style="height:60px;width:60px;margin:1rem;" />
 <b>Understand source control using Git</b><br />And know how to collaborate on repositories within GitHub. You should
 be familiar with initializing a repo, adding + committing + pushing code, branches, and pull requests. Be familiar with
 how to interact with Git/Github from within your favorite IDE. Bonus: Learn Github actions, such as how to build, test, and deploy your code automatically.</p>
 
-<div style="margin-left:8em;">
+<div style="margin-left:6em;">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/t38-yes36ns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+
+<br clear=all />
+<p><img src="../images/circle-2.png" align="left" alt="1" style="height:60px;width:60px;margin:1rem;" />
+<b>Learn the Linux shell and do not be afraid of it.</b><br />We will be using the AWS command-line tools, scripting in bash, and will consume and generate plenty of JSON and YAML. Be familiar with <code>curl</code>, <code>httpie</code>, or <code>wget</code> to fetch remote objects or interact with APIs. Bonus: Learn how to use <code>jq</code>.</p>
+
+<div style="margin-left:6em;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/cBokz0LTizk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div style="margin-left:6em;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/uxEJU96gHzA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+<br clear=all />
+<p><img src="../images/circle-3.png" align="left" alt="1" style="height:60px;width:60px;margin:1rem;" />
+<b>Learn a basic Linux package manager such as <code>apt</code>, <code>yum</code>, or <code>apk</code>.</b><br />You will create and delete many instances in this course, and how to “bootstrap” an instance automatically upon creation. This means loading software, and that means a package manager. One great way to practice this is with Docker (see below).</p>
+
+<div style="margin-left:6em;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/0D4wGOy_a9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+<br clear=all />
+<p><img src="../images/circle-4.png" align="left" alt="1" style="height:60px;width:60px;margin:1rem;" />
+<b>Know how to work in Python3.</b><br />Be familiar with how to create virtual environments using <code>pipenv</code>, how to install dependencies, and manage local files, <code>env</code> variables, etc. within your code. Python2 will not be accepted. Python in this course will interact with cloud infrastructure, so a proper understanding
+of error handling and exceptions is useful. 
+Bonus: Create an AWS account of your own and start working with the boto3 library.</p>
+
+<div style="margin-left:6em;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/h2azrD35EYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 
 <br clear=all />
 <p><img src="../images/circle-5.png" align="left" alt="1" style="height:60px;width:60px;margin:1rem;" />
@@ -80,21 +98,10 @@ how to interact with Git/Github from within your favorite IDE. Bonus: Learn Gith
 containerized deployments but will expect you to understand the basics of various run commands, port and volume
 mappings, environment variables, and commands.</p>
 
-<div style="margin-left:8em;">
+<div style="margin-left:6em;">
+  <p>Try a <a href="https://nmagee.github.io/cs4740/labs/microservices.html" target="_new" style="font-weight:bold;">free lab</a> to learn Docker.</p>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/HMxDaM3-c1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
-<br clear=all />
-<hr size=1 />
-<h2>Join the Discord Server</h2>
-
-<p>One remnant of COVID online teaching that I am going to retain is a course discord server. If you use Discord already you’ll be familiar with the concept – if not, create a free account and join our server. You’ll pick it up easily. This will be a useful place for links, quick updates, and Q&A.</p>
-<p>Click the image below to join:</p>
-
-<a href="https://discord.gg/fTf9Vh3kaq" target="_new">
-  <img src="../images/discord-logo.png" alt="Discord Server" style="max-width:200px;margin-left:8em;" />
-</a>
-
 
 
       </section>
