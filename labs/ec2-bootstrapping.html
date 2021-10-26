@@ -130,7 +130,7 @@ A few notes:
   <li>A security consideration is that a GitHub gist must either be public or hidden, though hidden does not mean secure. A more secure option would be to fetch the script from a private Amazon S3 bucket, and grant the EC2 instance role explicit READ privileges for the bucket.</li>
 </ul>
 
-  <li><b>Debugging:</b> If you are familiar with Docker (or after the Microservices portion of this course) you can use basic OS distribution containers (Ubuntu, Amazon Linux, CentOS, Debian, etc.) as a way to test bootstrapping scripts, determine software availability and path, and debug your bootstrapping process. Commands like <code>sudo yum history</code> also help show you what has completed.<br /><br />
+  <li><b>Debugging:</b> First, if you do not believe your bootstrapping has succeeded, you should check to see that it has completed. Even in the simple example above, the process may take 5 minutes to complete. Second, if you are familiar with Docker (or after the Microservices portion of this course) you can use basic OS distribution containers (Ubuntu, Amazon Linux, CentOS, Debian, etc.) as a way to test bootstrapping scripts, determine software availability and path, and debug your bootstrapping process. Commands like <code>sudo yum history</code> also help show you what has completed.<br /><br />
 <pre>
 [root@ip-172-31-93-10 ec2-user]# sudo yum history
 Loaded plugins: priorities, update-motd, upgrade-helper
