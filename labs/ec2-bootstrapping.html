@@ -107,7 +107,7 @@ packages:
 runcmd:
  - [ sh, -c, "amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2" ]
  - systemctl start httpd
- - sudo systemctl enable httpd
+ - systemctl enable httpd
  - [ sh, -c, "usermod -a -G apache ec2-user" ]
  - [ sh, -c, "chown -R ec2-user:apache /var/www" ]
  - chmod 2775 /var/www
