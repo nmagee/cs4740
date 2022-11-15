@@ -37,7 +37,9 @@
         
 <h2>PA3: Debugging the Quote Assembler</h2>
 
-<p>Below are a few notes and tips on how to test and debug your API Gateway for this assignment.</p>
+<p>Below are a few notes and tips on how to test and debug your API Gateway for this assignment.
+These are both reminders about the basics of Lambda, the API Gateway, and Chalice, as well as a few
+technical details about how your API is graded.</p>
 
 <ol>
   <li>For issues with installing Chalice, the best fallback/failsafe solution is to create a Python3 virtual 
@@ -53,10 +55,19 @@ python3 -m pip install chalice boto3 ...
   <li>Once you submit your API endpoint URL via the web form, 10 requests will be queued up to send you via the HTTP 
 POST method. These may begin arriving in as little as 2-3 minutes, or might take hours to arrive, depending upon the 
 work of other students at the time.
-  <li>The POST request is sending one JSON payload to your endpoint, in the form of two objects (key-value 
-pairs). To debug arriving data, try printing out the entire <code>event</code> data to be sure you are parsing the 
-payload correctly.
-  <li>Use Postman or <code>curl</code> to test locally before deploying.
+  <li>Each POST request sent to your endpoint for grading contains one JSON payload to your endpoint, 
+in the form of two objects (key-value pairs). To debug arriving data, try printing out the entire <code>event</code> data to be sure you are parsing the 
+payload correctly. Within Chalice that can be done by loading <code>app.current_request.json_body</code> into a 
+variable.
+  <li>Use Postman or <code>curl</code> to test locally before deploying. If using Chalice, deploy it locally first:
+<pre><code>chalice local</code></pre>
+Then <code>curl</code> against it locally using the command-line:
+<pre><code>curl -X POST \
+  -d '{"key1":"value1", "key2":"value2"}' \
+  -H "Content-Type: application/json" \
+  http://127.0.0.1:8000/fragment
+</code></pre>
+
   <li>If you have submitted your URL via the web form, be sure your API is receiving and handling requests 
 happily (i.e. returning a response code 200). If your API is throwing errors, the testing process will 
 eventually timeout. <b>The instructor's test harness will only attempt each payload 10 times.</b>
