@@ -41,7 +41,15 @@
 
 <ol>
   <li>For issues with installing Chalice, the best fallback/failsafe solution is to create a Python3 virtual 
-environment and load chalice within there. <code>virtualenv></code> and <code>pipenv</code> are ideal for this.
+environment and load chalice within there. <code>virtualenv</code> and <code>pipenv</code> are ideal for this.
+<pre><code>pipenv shell
+pipenv install chalice boto3 ...
+</code></pre>
+or
+<pre><code>virtualenv venv
+source venv/bin/activate
+python3 -m pip install chalice boto3 ...
+</code></pre>
   <li>Once you submit your API endpoint URL via the web form, 10 requests will be queued up to send you via the HTTP 
 POST method. These may begin arriving in as little as 2-3 minutes, or might take hours to arrive, depending upon the 
 work of other students at the time.
@@ -51,13 +59,16 @@ payload correctly.
   <li>Use Postman or <code>curl</code> to test locally before deploying.
   <li>If you have submitted your URL via the web form, be sure your API is receiving and handling requests 
 happily (i.e. returning a response code 200). If your API is throwing errors, the testing process will 
-eventually timeout. The instructor's test harness will only attempt each payload 10 times.
+eventually timeout. <b>The instructor's test harness will only attempt each payload 10 times.</b>
   <li>However, these 10 attempts should give you plenty of CloudWatch logging to review, provided you are 
-outputting your errors enough to get meaningful data from them.
+outputting meaningful and informative errors.
   <li>Errors and debugging are important and useful! If you debug, re-deploy, and re-submit your API for grading, 
-either wait a few hours before resubmiting or, within your data logic, be able to accommodate for the same payload 
-arriving to your endpoint more than once.
+either wait a few hours before resubmitting or, within your data logic, be able to accommodate for the same payload 
+arriving to your endpoint more than once. (If all payloads from your first test series have not expired, they might 
+also arrive during your second test series, etc.)
  </ol>
+
+<img src="https://s3.amazonaws.com/cs4740-resources/images/setup-diagram.png" alt="Diagram" />
 
       </section>
       <footer>
