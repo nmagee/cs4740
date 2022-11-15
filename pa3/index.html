@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>CS4740 Cloud Computing - PA3 Quote Assembler</title>
+
+    <link rel="stylesheet" href="https://nmagee.github.io/cs4740/stylesheets/styles.css">
+    <link rel="stylesheet" href="https://nmagee.github.io/cs4740/stylesheets/github-light.css">
+    <link rel="Shortcut Icon" href="https://www.rc.virginia.edu/images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <style>
+      li {margin-bottom:1rem;}
+      .btn {padding:8px;margin-right:8px;background-color:#555;color:white;border-radius: 4px;}
+    </style>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="https://nmagee.github.io/cs4740/" style="color:black;text-decoration:none;">CS4740 Cloud Computing</a></h1>
+        <p>Neal Magee, Ph.D.<br />Solution Architect, Research Computing<br />University of Virginia, Fall 2022</p>
+
+        <div style="min-height:2rem;"></div>
+
+        <ul>
+          <li><a href="https://nmagee.github.io/cs4740/">Return to the<strong>Syllabus</strong></a></li>
+          <li><a href="https://github.com/cs4740/" target="_new">Code on <strong>GitHub</strong></a></li>
+          <li><a href="https://l.uvarc.io/f22" target="_new">Q&A on <strong>Discord</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        
+<h2>PA3: Debugging the Quote Assembler</h2>
+
+<p>Below are a few notes and tips on how to test and debug your API Gateway for this assignment.</p>
+
+<ol>
+  <li>For issues with installing Chalice, the best fallback/failsafe solution is to create a Python3 virtual 
+environment and load chalice within there. <code>virtualenv></code> and <code>pipenv</code> are ideal for this.
+  <li>Once you submit your API endpoint URL via the web form, 10 requests will be queued up to send you via the HTTP 
+POST method. These may begin arriving in as little as 2-3 minutes, or might take hours to arrive, depending upon the 
+work of other students at the time.
+  <li>The POST request is sending one JSON payload to your endpoint, in the form of two objects (key-value 
+pairs). To debug arriving data, try printing out the entire <code>event</code> data to be sure you are parsing the 
+payload correctly.
+  <li>Use Postman or <code>curl</code> to test locally before deploying.
+  <li>If you have submitted your URL via the web form, be sure your API is receiving and handling requests 
+happily (i.e. returning a response code 200). If your API is throwing errors, the testing process will 
+eventually timeout. The instructor's test harness will only attempt each payload 10 times.
+  <li>However, these 10 attempts should give you plenty of CloudWatch logging to review, provided you are 
+outputting your errors enough to get meaningful data from them.
+  <li>Errors and debugging are important and useful! If you debug, re-deploy, and re-submit your API for grading, 
+either wait a few hours before resubmiting or, within your data logic, be able to accommodate for the same payload 
+arriving to your endpoint more than once.
+ </ol>
+
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://nmagee.github.io/">nmagee</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="https://nmagee.github.io/cs4740/javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
