@@ -68,9 +68,11 @@ Then <code>curl</code> against it locally using the command-line:
   http://127.0.0.1:8000/fragment
 </code></pre>
 
-  <li>If you have submitted your URL via the web form, be sure your API is receiving and handling requests 
+  <li>Once you have submitted your URL via the web form, be sure your API is receiving and handling requests 
 happily (i.e. returning a response code 200). If your API is throwing errors, the testing process will 
 eventually timeout. <b>The instructor's test harness will only attempt each payload 10 times.</b>
+  <li>You can check the time of the last payload submitted to your API and its corresponding HTTP Response Code
+from the <a href="https://auth.uvasomrc.io/cs4740/results.html" target="_new">Results Page</a>.
   <li>However, these 10 attempts should give you plenty of CloudWatch logging to review, provided you are 
 outputting meaningful and informative errors.
   <li>Errors and debugging are important and useful! If you debug, re-deploy, and re-submit your API for grading, 
